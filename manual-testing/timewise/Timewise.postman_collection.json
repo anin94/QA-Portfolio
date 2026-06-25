@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "594313cc-7d9f-41a7-91a5-89e4c1976b21",
+		"name": "Timewise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38717156"
+	},
+	"item": [
+		{
+			"name": "Get All Methods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"ani94\",\n    \"firstName\": \"Ani\",\n    \"midName\": \"Mincheva\",\n    \"lastName\": \"Nenova\",\n    \"email\": \"ani94@example.com\",\n    \"password\": \"123456789\",\n    \"rePassword\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/User/Register",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ani94@example.com\",\n    \"password\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/User/Authorization",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxOThmNTY2NS1lZjZkLTQ3NTYtYWU1NC02NWM3MTA1ZTVjOTciLCJpYXQiOiIxMi8xNC8yMDI0IDc6NTE6NTAgQU0iLCJVc2VySWQiOiI4ZDU1YTczMi1iZjk0LTQ0ZWMtOThiMi1lMDEyMzhjMzNiN2QiLCJFbWFpbCI6ImFuaTk0QGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJhbmk5NCIsImV4cCI6MTczNDE4NDMxMCwiaXNzIjoiVGltZVdpc2VfQXBwX1NvZnRVbmkiLCJhdWQiOiJUaW1lV2lzZV9XZWJBUElfU29mdFVuaSJ9.Awp7pO5YBaGW4jZL15YjnctUY_jNtmUBb8ioW69lJnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskName\": \"Write Report\",\n    \"startDate\": \"25/01/2025 09:00\",\n    \"endDate\": \"26/01/2025 18:00\",\n    \"description\": \"Summarize project updates in detail.\",\n    \"status\": \"inprogress\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/Task/Create",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Task",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxOThmNTY2NS1lZjZkLTQ3NTYtYWU1NC02NWM3MTA1ZTVjOTciLCJpYXQiOiIxMi8xNC8yMDI0IDc6NTE6NTAgQU0iLCJVc2VySWQiOiI4ZDU1YTczMi1iZjk0LTQ0ZWMtOThiMi1lMDEyMzhjMzNiN2QiLCJFbWFpbCI6ImFuaTk0QGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJhbmk5NCIsImV4cCI6MTczNDE4NDMxMCwiaXNzIjoiVGltZVdpc2VfQXBwX1NvZnRVbmkiLCJhdWQiOiJUaW1lV2lzZV9XZWJBUElfU29mdFVuaSJ9.Awp7pO5YBaGW4jZL15YjnctUY_jNtmUBb8ioW69lJnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/Task/AllTasks",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Task",
+						"AllTasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tasks with param",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxOThmNTY2NS1lZjZkLTQ3NTYtYWU1NC02NWM3MTA1ZTVjOTciLCJpYXQiOiIxMi8xNC8yMDI0IDc6NTE6NTAgQU0iLCJVc2VySWQiOiI4ZDU1YTczMi1iZjk0LTQ0ZWMtOThiMi1lMDEyMzhjMzNiN2QiLCJFbWFpbCI6ImFuaTk0QGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJhbmk5NCIsImV4cCI6MTczNDE4NDMxMCwiaXNzIjoiVGltZVdpc2VfQXBwX1NvZnRVbmkiLCJhdWQiOiJUaW1lV2lzZV9XZWJBUElfU29mdFVuaSJ9.Awp7pO5YBaGW4jZL15YjnctUY_jNtmUBb8ioW69lJnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/Task/AllTasks?where=todo",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Task",
+						"AllTasks"
+					],
+					"query": [
+						{
+							"key": "where",
+							"value": "todo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Task Count",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxOThmNTY2NS1lZjZkLTQ3NTYtYWU1NC02NWM3MTA1ZTVjOTciLCJpYXQiOiIxMi8xNC8yMDI0IDc6NTE6NTAgQU0iLCJVc2VySWQiOiI4ZDU1YTczMi1iZjk0LTQ0ZWMtOThiMi1lMDEyMzhjMzNiN2QiLCJFbWFpbCI6ImFuaTk0QGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJhbmk5NCIsImV4cCI6MTczNDE4NDMxMCwiaXNzIjoiVGltZVdpc2VfQXBwX1NvZnRVbmkiLCJhdWQiOiJUaW1lV2lzZV9XZWJBUElfU29mdFVuaSJ9.Awp7pO5YBaGW4jZL15YjnctUY_jNtmUBb8ioW69lJnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/Task/Count",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Task",
+						"Count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxOThmNTY2NS1lZjZkLTQ3NTYtYWU1NC02NWM3MTA1ZTVjOTciLCJpYXQiOiIxMi8xNC8yMDI0IDc6NTE6NTAgQU0iLCJVc2VySWQiOiI4ZDU1YTczMi1iZjk0LTQ0ZWMtOThiMi1lMDEyMzhjMzNiN2QiLCJFbWFpbCI6ImFuaTk0QGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJhbmk5NCIsImV4cCI6MTczNDE4NDMxMCwiaXNzIjoiVGltZVdpc2VfQXBwX1NvZnRVbmkiLCJhdWQiOiJUaW1lV2lzZV9XZWJBUElfU29mdFVuaSJ9.Awp7pO5YBaGW4jZL15YjnctUY_jNtmUBb8ioW69lJnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskName\": \"Summarizing report\",\n    \"startDate\": \"26/01/2025 09:00\",\n    \"endDate\": \"29/01/2025 15:00\",\n    \"description\": \"A report is needed for the meeting.\",\n    \"status\": \"InProgress\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/Task/Edit/92031be4-c2f5-43e1-5b95-08dd1c0e9add",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Task",
+						"Edit",
+						"92031be4-c2f5-43e1-5b95-08dd1c0e9add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIxOThmNTY2NS1lZjZkLTQ3NTYtYWU1NC02NWM3MTA1ZTVjOTciLCJpYXQiOiIxMi8xNC8yMDI0IDc6NTE6NTAgQU0iLCJVc2VySWQiOiI4ZDU1YTczMi1iZjk0LTQ0ZWMtOThiMi1lMDEyMzhjMzNiN2QiLCJFbWFpbCI6ImFuaTk0QGV4YW1wbGUuY29tIiwiVXNlck5hbWUiOiJhbmk5NCIsImV4cCI6MTczNDE4NDMxMCwiaXNzIjoiVGltZVdpc2VfQXBwX1NvZnRVbmkiLCJhdWQiOiJUaW1lV2lzZV9XZWJBUElfU29mdFVuaSJ9.Awp7pO5YBaGW4jZL15YjnctUY_jNtmUBb8ioW69lJnw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://timewise2-env.eba-mkmm3jwy.eu-north-1.elasticbeanstalk.com/api/Task/Delete/38db1948-a47a-4848-6e0b-08dd1c0f0df7",
+					"protocol": "http",
+					"host": [
+						"timewise2-env",
+						"eba-mkmm3jwy",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Task",
+						"Delete",
+						"38db1948-a47a-4848-6e0b-08dd1c0f0df7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
