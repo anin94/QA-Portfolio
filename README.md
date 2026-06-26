@@ -17,7 +17,7 @@ A collection of manual and automated testing projects built during the SoftUni Q
 
 | Project | Description | Tests |
 |---------|-------------|-------|
-| [Recipe Sharing Hub](./automation/recipe-sharing-hub/) | E2E test suite with Playwright | 7 passing |
+| [Recipe Sharing Hub](./automation/recipe-sharing-hub/) | E2E test suite with Playwright | 8 passing |
 
 ---
 
